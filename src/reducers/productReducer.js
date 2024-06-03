@@ -7,6 +7,8 @@ export const productReducer = (state= {},action) =>{
         case ALL_PRODUCT_REQUESTS:
             return {loading:true,products:[]}
         case ALL_PRODUCT_SUCCESS:
+            // console.log("payload : ",action.payload)
+            // console.log("products : ",action)
             return {loading:false,products:action.payload,productsCount:action.products.productsCount}
         case ALL_PRODUCT_FAIL:
             return {loading:false,error:action.payload}
